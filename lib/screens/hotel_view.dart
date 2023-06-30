@@ -14,7 +14,6 @@ class HotelView extends StatelessWidget {
 
     return Container(
       width: size.width * 0.6,
-      height: 350,
       padding: const EdgeInsets.symmetric(
         horizontal: 15.0,
         vertical: 17.0
