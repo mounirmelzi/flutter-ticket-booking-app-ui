@@ -1,6 +1,7 @@
 import 'package:book_tickets/utils/app_layout.dart';
 import 'package:book_tickets/utils/app_styles.dart';
 import 'package:book_tickets/widgets/icon_text_widget.dart';
+import 'package:book_tickets/widgets/ticket_tabs.dart';
 import 'package:book_tickets/widgets/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -25,51 +26,9 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             const Gap(25.0),
-            FittedBox(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50.0),
-                  color: const Color(0xfff4f6fd),
-                ),
-                padding: const EdgeInsets.all(3.5),
-                child: Row(
-                  children: [
-                    Container(
-                      width: size.width * 0.44,
-                      padding: const EdgeInsets.symmetric(vertical: 7.0),
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(50.0)
-                        ),
-                        color: Colors.white,
-                      ),
-                      child: Center(
-                          child: Text(
-                            "Airline Tickets",
-                            style: Styles.textStyle,
-                          )
-                      ),
-                    ),
-                    Container(
-                      width: size.width * 0.56,
-                      padding: const EdgeInsets.symmetric(vertical: 7.0),
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.horizontal(
-                            right: Radius.circular(50.0)
-                        )
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Hotels",
-                          style: Styles.textStyle.copyWith(
-                            color: Colors.grey[600]
-                          ),
-                        )
-                      ),
-                    )
-                  ],
-                ),
-              ),
+            const AppTicketTabs(
+              firstTab: "Airline Tickets",
+              secondTab: "Hotels",
             ),
             const Gap(25.0),
             const IconText(
