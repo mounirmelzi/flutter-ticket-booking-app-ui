@@ -38,6 +38,7 @@ dependencies:
   fluentui_icons: ^1.0.0
   gap: ^2.0.0
   get:
+  barcode_widget:
 
 dev_dependencies:
   flutter_test:

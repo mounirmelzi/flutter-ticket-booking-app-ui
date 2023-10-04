@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ThickContainer extends StatelessWidget {
-  const ThickContainer({super.key});
+  final bool isColor;
+
+  const ThickContainer({super.key, required this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class ThickContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
         border: Border.all(
           width: 2.5,
-          color: Colors.white,
+          color: isColor ? Colors.white : const Color(0xFF8ACCF7),
         )
       ),
     );
